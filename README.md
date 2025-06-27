@@ -1,0 +1,3 @@
+# Lektorodd-lf Format
+
+Lite custom-format for å eksportera løysingsforlaga på bloggen til ok. pdf-ar...
