@@ -24,7 +24,7 @@
   lang: "no",
   region: "NO",
   font: "Inter",
-  fontsize: 11pt,
+  fontsize: 12pt,
   title-size: 1.5em,
   subtitle-size: 1.25em,
   heading-family: "Inter",
@@ -35,9 +35,6 @@
   sectionnumbering: none,
   pagenumbering: "1/1",
   toc: false,
-  toc_title: none,
-  toc_depth: none,
-  toc_indent: 1.5em,
   doc,
 ) = {
   set page(
@@ -54,7 +51,7 @@
     header: [
       #set text(font: "JetBrains Mono", size: 12pt) 
       #align(right + horizon)[
-        #text(fill: white)[Torodd F. Ottestad] \ #link("https://lektorodd.no")[#text(fill: rgb("#EE6C4D"))[\@lektorodd]]
+        #text(fill: white)[Torodd F. Ottestad] \ #link("https://lektorodd.no/lf")[#text(fill: rgb("#EE6C4D"))[\@lektorodd]]
       ]
     ],
   )
@@ -68,7 +65,7 @@
     if "2" in repr(it.body) {
       pagebreak()
     }
-    set text(font: "JetBrains Mono", weight: "bold", size: 1.5em)
+    set text(font: "JetBrains Mono", weight: "bold", size: 1.4em)
     it
   }
 
@@ -92,33 +89,6 @@
         }
       }
     ]]
-  }
-
-  if date != none {
-    align(center)[#block(inset: 1em)[
-      #date
-    ]]
-  }
-
-  if abstract != none {
-    block(inset: 2em)[
-    #text(weight: "semibold")[#abstract-title] #h(1em) #abstract
-    ]
-  }
-
-  if toc {
-    let title = if toc_title == none {
-      auto
-    } else {
-      toc_title
-    }
-    block(above: 0em, below: 2em)[
-    #outline(
-      title: toc_title,
-      depth: toc_depth,
-      indent: toc_indent
-    );
-    ]
   }
 
   if cols == 1 {
