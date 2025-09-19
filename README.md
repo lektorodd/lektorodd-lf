@@ -35,3 +35,4 @@ Lite custom-format for å eksportera løysingsforlaga på bloggen til ok. pdf-ar
 >     text: "Last ned som PDF"
 > 
 > i yaml-header for å få det til å funka
+
