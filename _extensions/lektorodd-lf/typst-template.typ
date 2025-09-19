@@ -1,4 +1,3 @@
-
 // This is an example typst template (based on the default template that ships
 // with Quarto). It defines a typst function named 'article' which provides
 // various customization options. This function is called from the 
@@ -9,7 +8,6 @@
 // documentation on creating typst templates and some examples here: 
 //   - https://typst.app/docs/tutorial/making-a-template/
 //   - https://github.com/typst/templates
-
 
 #let lf(
   title: "Løysingsforslag",
@@ -45,13 +43,13 @@
       #box(
         fill: rgb("#3D5A80"),
         width: 100%,
-        height: 7%,
+        height: 6%,
       )
     ],
     header: [
-      #set text(font: "JetBrains Mono", size: 12pt) 
+      #set text(font: "JetBrains Mono", size: 10pt) 
       #align(right + horizon)[
-        #text(fill: white)[Torodd F. Ottestad] \ #link("https://lektorodd.no/lf")[#text(fill: rgb("#EE6C4D"))[\@lektorodd]]
+        #text(fill: white)[Torodd F. Ottestad] \ #link("https://lektorodd.no/lf.html")[#text(fill: rgb("#EE6C4D"))[\@lektorodd]]
       ]
     ],
   )
@@ -61,7 +59,7 @@
            font: font,
            size: fontsize)
 
-    show heading.where(level:1): it => {
+  show heading.where(level:1): it => {
     if "1" not in repr(it.body) {
       pagebreak()
     }
